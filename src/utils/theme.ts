@@ -9,7 +9,7 @@ export const breakPoints = {
 
 export const ThemeProps = {
     default: {
-        s_input_border: '1px solid red',
+        s_input_border_image_source: 'linear-gradient(90deg, #D3DAE8 0%, #A7B7D8 100%)',
         s_input_box_shadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
         s_input_border_radius: '4px',
         s_button_background_color: 'linear-gradient(90deg, #911812 0%, #E1261C 100%)',
