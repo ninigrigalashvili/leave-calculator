@@ -1,7 +1,7 @@
 import React from "react";
 import { SContainer } from "components/PageContainer/styled";
 import * as S from "./styled";
-import CompensationDescription from "pages/CompensationDescription";
+import CompensationDescription from "pages/Compensation/CompensationDescription";
 import CompensationCard from "./CompensationCard";
 
 const CompensationPage: React.FC = () => {
