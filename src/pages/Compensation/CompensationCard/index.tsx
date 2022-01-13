@@ -5,12 +5,11 @@ import { SInput } from "components/styled/input.styled";
 import { SCard } from "components/CCard/styled";
 import { SSpace } from "components/styled/space.styled";
 import CIcon from "components/Icon";
-import { Checkbox } from 'antd';
+import { Checkbox } from "antd";
 import * as S from "./styled";
 
 const CompensationCard: React.FC = () => {
-
-  const [ isTuberculosis, setIsTuberculosis ] = React.useState(false)
+  const [isTuberculosis, setIsTuberculosis] = React.useState(false);
 
   const onFinish = (values) => {
     console.log(values);
@@ -49,10 +48,7 @@ const CompensationCard: React.FC = () => {
         >
           <SInput suffix={<CIcon filename={"days"} />} />
         </SForm.Item>
-        <SForm.Item
-          name={"is_tuberbulosis"}
-          valuePropName="checked"
-        >
+        <SForm.Item name={"is_tuberbulosis"} valuePropName="checked">
           <Checkbox>I have Tuberculosis</Checkbox>
         </SForm.Item>
         <SForm.Item>
