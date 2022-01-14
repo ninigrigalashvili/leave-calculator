@@ -6,8 +6,8 @@ export const SCard = styled.div`
   background-color: ${(props) =>
     ThemeProps[props.theme.mode]["s_card_background_color"]};
   position: relative;
-  width: 320px;
-  height: 755px;
+  // width: 320px;
+  // height: 755px;
   /* ::before {
         content: "";
         position: absolute;

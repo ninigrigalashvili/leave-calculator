@@ -15,8 +15,6 @@ export const SInput = styled(Input)`
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
-  display: grid;
-  grid-template-columns: 11fr 1fr;
 
   input {
     border: none;

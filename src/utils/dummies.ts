@@ -14,7 +14,7 @@ export const secondaryText =
 export const list = [
   "Tellus Ullamcorper Inceptos",
   "Magna Condimentum",
-  ["Mattis Tristique", "Pellentesque Dapibus"],
+  ["Mattis Tristique", " Pharetra Pellentesque Dapibus"],
   "Aenean Inceptos",
   "Parturient Bibendum",
 ];

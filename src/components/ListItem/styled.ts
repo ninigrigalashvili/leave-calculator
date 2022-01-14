@@ -16,7 +16,7 @@ export const StyledListItem = styled.div<{ type: string }>`
   }}
 `;
 
-export const StyledListText = styled.p`
+export const StyledListText = styled.span`
   color: #ffff;
   font-size: 18px;
 `;

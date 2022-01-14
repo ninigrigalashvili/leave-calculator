@@ -19,6 +19,9 @@ export const ThemeProps = {
     s_button_color: "#ffff",
     s_card_padding: "80px 20px",
     s_card_background_color: "#ffff",
-    s_checkbox_border_color: "linear-gradient(90deg, #911812 0%, #E1261C 100%)",
+    s_checkbox_border_color:
+      " linear-gradient(90deg, #D3DAE8 0%, #A7B7D8 100%);",
+    s_checkbox_tick_color: "#111317",
+    s_checkbox_box_shadow: "0px 2px 4px 0px #0000001A",
   },
 };
