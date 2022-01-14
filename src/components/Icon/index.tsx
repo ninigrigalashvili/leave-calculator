@@ -3,6 +3,7 @@ import SVG from "react-inlinesvg";
 
 type Props = {
   filename: string;
+  className?: string;
 };
 
 const CIcon: React.FC<Props> = ({ filename, ...rest }) => {

@@ -7,6 +7,7 @@ import { SSpace } from "components/styled/space.styled";
 import CIcon from "components/Icon";
 import { Checkbox } from 'antd';
 import * as S from "./styled";
+import CalculationResult from "components/CalculationResult";
 
 const CompensationCard: React.FC = () => {
 
@@ -34,8 +35,9 @@ const CompensationCard: React.FC = () => {
               message: "Gross Income is Required",
             },
           ]}
+          className='average-income'
         >
-          <SInput suffix={<CIcon filename={"euro"} />} />
+          <SInput suffix={<CIcon filename={"euro"} className='suf-average' />} />
         </SForm.Item>
         <SForm.Item
           name={"leave_days"}
@@ -46,18 +48,21 @@ const CompensationCard: React.FC = () => {
               message: "Sick Leave Days are Required",
             },
           ]}
+          className='leave-days'
         >
-          <SInput suffix={<CIcon filename={"days"} />} />
+          <SInput suffix={<CIcon filename={"days"} className='suf-days' />} />
         </SForm.Item>
         <SForm.Item
           name={"is_tuberbulosis"}
           valuePropName="checked"
+          className='tuber-check'
         >
           <Checkbox>I have Tuberculosis</Checkbox>
         </SForm.Item>
         <SForm.Item>
           <SButton htmlType="submit">Calculate</SButton>
         </SForm.Item>
+        <CalculationResult />
       </SForm>
     </SCard>
   );
