@@ -9,7 +9,7 @@ import {
   monthDays,
 } from "utils/constants";
 import CIcon from "components/Icon";
-import { Checkbox } from "antd";
+import { SCheckbox } from "components/styled/checkbox";
 import { calculateNet } from "utils/calculations";
 import * as S from "./styled";
 import CalculationResult from "components/CalculationResult";
@@ -101,7 +101,7 @@ const CompensationCard: React.FC = () => {
           valuePropName="checked"
           className="tuber-check"
         >
-          <Checkbox>I have Tuberculosis</Checkbox>
+          <SCheckbox>I have Tuberculosis</SCheckbox>
         </SForm.Item>
         <SForm.Item>
           <SButton htmlType="submit">Calculate</SButton>
