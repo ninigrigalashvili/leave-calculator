@@ -1,13 +1,14 @@
 import { ThemeProps } from "utils/theme";
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const SCard = styled.div`
-    padding: ${(props) => ThemeProps[props.theme.mode]['s_card_padding']};
-    background-color: ${(props) => ThemeProps[props.theme.mode]['s_card_background_color']};
-    position: relative;
-    width: 320px;
-    height: 755px;
-    /* ::before {
+  padding: ${(props) => ThemeProps[props.theme.mode]["s_card_padding"]};
+  background-color: ${(props) =>
+    ThemeProps[props.theme.mode]["s_card_background_color"]};
+  position: relative;
+  width: 320px;
+  height: 755px;
+  /* ::before {
         content: "";
         position: absolute;
         top: 0;
@@ -26,55 +27,56 @@ export const SCard = styled.div`
         border-right: 20px solid #fff;
         width: 0;
     } */
-    .average-income, .leave-days {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 5px !important;
-        label {
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 20px;
-            color: #111317;
-        }
-        .ant-input-suffix {
-            display: flex;
-            align-items: center;
-        }
-        .ant-input {
-            padding-left: 10px;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 20px;
-            color: #111317;
-        }
+  .average-income,
+  .leave-days {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px !important;
+    label {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #111317;
     }
-    .average-income {
-        .ant-input-suffix {
-            width: 13px;
-            margin-left: 4px;
-        }
+    .ant-input-suffix {
+      display: flex;
+      align-items: center;
     }
-    .leave-days {
-        .ant-input-suffix {
-            width: 44px;
-            margin-right: 10px;
-        }
+    .ant-input {
+      padding-left: 10px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #111317;
     }
-    .leave-days {
-        margin-bottom: 20px;
+  }
+  .average-income {
+    .ant-input-suffix {
+      width: 13px;
+      margin-left: 4px;
     }
-    .tuber-check {
-        .ant-checkbox-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 20px;
-        }
-        .ant-checkbox {
-            display: flex;
-        }
+  }
+  .leave-days {
+    .ant-input-suffix {
+      width: 44px;
+      margin-right: 10px;
     }
-`
+  }
+  .leave-days {
+    margin-bottom: 20px;
+  }
+  .tuber-check {
+    .ant-checkbox-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    .ant-checkbox {
+      display: flex;
+    }
+  }
+`;

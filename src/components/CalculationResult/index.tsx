@@ -1,9 +1,23 @@
 import React from "react";
-import GlobalStyles from "../../app.styled";
-import CompensationPage from "pages/Compensation";
 import * as S from "./styled";
 
-const CalculationResult: React.FC = () => {
+type Props = {
+  employerDays: number;
+  insuranceDays: number;
+  totalCompensation: number;
+  dailyAllowance: number;
+  totalDays: number;
+};
+
+const CalculationResult: React.FC<Props> = (props) => {
+  const employerCompensation = React.useMemo(() => {
+    return props.employerDays * props.dailyAllowance;
+  }, [props.dailyAllowance, props.employerDays]);
+
+  const insuranceCompensation = React.useMemo(() => {
+    return props.insuranceDays ? props.insuranceDays * props.dailyAllowance : 0;
+  }, [props.dailyAllowance, props.insuranceDays]);
+
   return (
     <S.ResultContainer>
       <S.Border />
@@ -11,32 +25,40 @@ const CalculationResult: React.FC = () => {
         <S.EmployerCompensation>
           <S.DaysQuantity>
             The employer compensates <br />
-            <span className="days">4 days</span>
+            <span className="days">{props.employerDays} days</span>
           </S.DaysQuantity>
           <S.DailyAllowance>
-            <span className="compensates-number">112,00€</span>
+            <span className="compensates-number">
+              {employerCompensation.toFixed(2)}€
+            </span>
             <br />
-            <span className="daily-allowance">Daily allowance 28,00 €</span>
+            <span className="daily-allowance">
+              Daily allowance {props.dailyAllowance.toFixed(2)} €
+            </span>
           </S.DailyAllowance>
         </S.EmployerCompensation>
         <S.InsuranceCompensation>
           <S.DaysQuantity>
             Health Insurance compensates <br />
-            <span className="days">0 days</span>
+            <span className="days">{props.insuranceDays} days</span>
           </S.DaysQuantity>
           <S.DailyAllowance>
-            <span className="compensates-number">0,00€</span>
+            <span className="compensates-number">
+              {insuranceCompensation.toFixed(2)}€
+            </span>
             <br />
-            <span className="daily-allowance">Daily allowance 28,00 €</span>
+            <span className="daily-allowance">
+              Daily allowance {props.dailyAllowance.toFixed(2)}€
+            </span>
           </S.DailyAllowance>
         </S.InsuranceCompensation>
       </S.Calculations>
       <S.Border />
       <S.TotalCompensation>
         <S.CompensationDaysResult>
-          Compensation total for 7 days (net)
+          Compensation total for {props.totalDays} days (net)
         </S.CompensationDaysResult>
-        <S.SubTotal>112,00€</S.SubTotal>
+        <S.SubTotal>{props.totalCompensation.toFixed(2)}</S.SubTotal>
       </S.TotalCompensation>
     </S.ResultContainer>
   );
