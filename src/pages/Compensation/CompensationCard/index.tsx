@@ -25,26 +25,29 @@ const CompensationCard: React.FC = () => {
     if (values.is_tuberculosis) {
       if (values.leave_days > tubercInsuranceDuration) {
         values.leave_days = tubercInsuranceDuration;
-        setTotalDays(tubercInsuranceDuration);
       }
     } else {
       if (values.leave_days > insuranceDuration) {
         values.leave_days = insuranceDuration;
-        setTotalDays(insuranceDuration);
       }
     }
-
     setTotalDays(values.leave_days);
     const compensationRate = values.average_income * 0.7;
     const dayGrossCompensation = compensationRate / monthDays;
     const dayNetCompensation = calculateNet(dayGrossCompensation);
     setDailyAllowance(dayNetCompensation);
-    console.log("dayNetCompensation", dayNetCompensation);
-    if (values.leave_days > 3 && values.leave_days < 9) {
-      setEmployerDays(values.leave_days);
+
+    if (values.leave_days <= 3) {
+      setEmployerDays(0);
+      setInsuranceDays(0);
+      setTotalCompensation(0);
+      setDailyAllowance(0);
+    } else if (values.leave_days > 3 && values.leave_days < 9) {
+      setEmployerDays(values.leave_days - 3);
+      setInsuranceDays(0);
       setTotalCompensation((values.leave_days - 3) * dayNetCompensation);
     } else if (values.leave_days >= 9) {
-      setEmployerDays(8);
+      setEmployerDays(5);
       setInsuranceDays(values.leave_days - 8);
       setTotalCompensation((values.leave_days - 3) * dayNetCompensation);
     }
@@ -88,7 +91,7 @@ const CompensationCard: React.FC = () => {
           <SInput suffix={<CIcon filename={"days"} className="suf-days" />} />
         </SForm.Item>
         <SForm.Item
-          name={"is_tuberbulosis"}
+          name={"is_tuberculosis"}
           valuePropName="checked"
           className="tuber-check"
         >
@@ -97,14 +100,14 @@ const CompensationCard: React.FC = () => {
         <SForm.Item>
           <SButton htmlType="submit">Calculate</SButton>
         </SForm.Item>
-        <CalculationResult />
+        <CalculationResult
+          employerDays={employerDays}
+          insuranceDays={insuranceDays}
+          totalCompensation={totalCompensation}
+          dailyAllowance={dailyAllowance}
+          totalDays={totalDays}
+        />
       </SForm>
-
-      <div>employerDays: {employerDays}</div>
-      <div>insuranceDays: {insuranceDays}</div>
-      <div>totalCompensation: {totalCompensation.toFixed(2)}</div>
-      <div>dailyAllowance: {dailyAllowance.toFixed(2)}</div>
-      <div>Compensation for total days {totalDays || 0} NET</div>
     </SCard>
   );
 };
