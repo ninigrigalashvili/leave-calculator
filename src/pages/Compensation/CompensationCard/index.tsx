@@ -74,6 +74,8 @@ const CompensationCard: React.FC = () => {
           className="average-income"
         >
           <SInput
+            type={"number"}
+            min={0}
             suffix={<CIcon filename={"euro"} className="suf-average" />}
           />
         </SForm.Item>
@@ -88,7 +90,11 @@ const CompensationCard: React.FC = () => {
           ]}
           className="leave-days"
         >
-          <SInput suffix={<CIcon filename={"days"} className="suf-days" />} />
+          <SInput
+            type={"number"}
+            min={0}
+            suffix={<CIcon filename={"days"} className="suf-days" />}
+          />
         </SForm.Item>
         <SForm.Item
           name={"is_tuberculosis"}
