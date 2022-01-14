@@ -40,4 +40,5 @@ export const StyledSecondaryText = styled.p`
 export const StyledListContainer = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 15px;
 `;

@@ -47,7 +47,7 @@ export const DaysQuantity = styled.div`
 export const DailyAllowance = styled.div`
   margin-top: 10px;
   text-align: center;
-  width: 80px;
+  width: 90px;
   .compensates-number {
     font-weight: 700;
     font-size: 18px;

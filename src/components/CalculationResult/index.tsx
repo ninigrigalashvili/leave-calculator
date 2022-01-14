@@ -58,7 +58,7 @@ const CalculationResult: React.FC<Props> = (props) => {
         <S.CompensationDaysResult>
           Compensation total for {props.totalDays} days (net)
         </S.CompensationDaysResult>
-        <S.SubTotal>{props.totalCompensation.toFixed(2)}</S.SubTotal>
+        <S.SubTotal>{props.totalCompensation.toFixed(2)} €</S.SubTotal>
       </S.TotalCompensation>
     </S.ResultContainer>
   );
