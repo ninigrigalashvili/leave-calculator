@@ -13,7 +13,6 @@ export const SInput = styled(Input)`
     box-shadow: ${(props) => ThemeProps[props.theme.mode]['s_input_box_shadow']};
     border-radius: ${(props) => ThemeProps[props.theme.mode]['s_input_border_radius']};
     width: 100%;
-    padding-left: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
     display: grid;
