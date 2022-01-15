@@ -2,12 +2,12 @@ import { ThemeProps } from "utils/theme";
 import styled from "styled-components";
 
 export const SCard = styled.div`
+  width: 320px;
   padding: ${(props) => ThemeProps[props.theme.mode]["s_card_padding"]};
   background-color: ${(props) =>
     ThemeProps[props.theme.mode]["s_card_background_color"]};
   position: relative;
-  // width: 320px;
-  // height: 755px;
+  height: 755px;
   /* ::before {
         content: "";
         position: absolute;
@@ -47,7 +47,6 @@ export const SCard = styled.div`
       align-items: center;
     }
     .ant-input {
-      padding-left: 10px;
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;
@@ -63,23 +62,30 @@ export const SCard = styled.div`
   .leave-days {
     .ant-input-suffix {
       width: 44px;
-      margin-right: 10px;
     }
   }
   .leave-days {
     margin-bottom: 20px;
   }
   .tuber-check {
+    margin: 0;
     .ant-checkbox-wrapper {
       display: flex;
       align-items: center;
-      gap: 10px;
       font-weight: 400;
       font-size: 14px;
       line-height: 20px;
     }
     .ant-checkbox {
       display: flex;
+      margin-top: -4px;
+    }
+    .ant-form-item-control-input {
+      min-height: 0;
+    }
+    .ant-checkbox+span {
+      padding: 0;
+      margin-left: 10px;
     }
   }
 `;

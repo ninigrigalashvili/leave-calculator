@@ -9,9 +9,7 @@ const CompensationDescription: React.FC = () => {
     <S.StyledContainer>
       <S.StyledMainTitle>{data.mainTitle}</S.StyledMainTitle>
       <S.StyledMainText>
-        {data.mainText[0]}
-        <span> {data.mainText[1]} </span>
-        {data.mainText[2]}
+        {data.mainText[0]} <span> {data.mainText[1]} </span>{data.mainText[2]}
       </S.StyledMainText>
 
       <S.StyledSecondaryContainer>

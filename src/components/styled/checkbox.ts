@@ -5,7 +5,8 @@ import { ThemeProps } from "utils/theme";
 export const SCheckbox = styled(Checkbox)`
   .ant-checkbox-input:focus + .ant-checkbox-inner,
   .ant-checkbox-wrapper:hover .ant-checkbox-inner,
-  .ant-checkbox:hover .ant-checkbox-inner {
+  .ant-checkbox:hover .ant-checkbox-inner,
+  .ant-checkbox-inner {
     border-image-source: ${(props) =>
       ThemeProps[props.theme.mode]["s_checkbox_border_color"]};
     border-image-slice: 1;
