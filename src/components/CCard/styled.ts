@@ -33,6 +33,9 @@ export const SCard = styled.div`
     display: flex;
     flex-direction: column;
     gap: 5px !important;
+    .ant-form-item-label {
+      padding: 0;
+    }
     label {
       font-size: 14px;
       font-weight: 400;
