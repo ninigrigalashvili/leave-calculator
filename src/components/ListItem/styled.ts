@@ -19,4 +19,6 @@ export const StyledListItem = styled.div<{ type: string }>`
 export const StyledListText = styled.span`
   color: #ffff;
   font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
 `;
