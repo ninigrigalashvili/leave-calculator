@@ -76,6 +76,7 @@ const CompensationCard: React.FC = () => {
           <SInput
             type={"number"}
             min={0}
+            max={10000000}
             suffix={<CIcon filename={"euro"} className="suf-average" />}
           />
         </SForm.Item>
@@ -93,6 +94,7 @@ const CompensationCard: React.FC = () => {
           <SInput
             type={"number"}
             min={0}
+            max={10000000}
             suffix={<CIcon filename={"days"} className="suf-days" />}
           />
         </SForm.Item>

@@ -1,5 +1,6 @@
 import React from "react";
 import * as S from "./styled";
+import { amountFormatter } from "utils/amountFormatter";
 
 type Props = {
   employerDays: number;
@@ -29,26 +30,28 @@ const CalculationResult: React.FC<Props> = (props) => {
           </S.DaysQuantity>
           <S.DailyAllowance>
             <span className="compensates-number">
-              {employerCompensation.toFixed(2)}€
+              {amountFormatter(employerCompensation)}€
             </span>
             <br />
             <span className="daily-allowance">
-              Daily allowance {props.dailyAllowance.toFixed(2)} €
+              Daily allowance {amountFormatter(props.dailyAllowance)} €
             </span>
           </S.DailyAllowance>
         </S.EmployerCompensation>
         <S.InsuranceCompensation>
           <S.DaysQuantity>
             Health Insurance compensates <br />
-            <span className="days">{props.insuranceDays} days</span>
+            <span className="days">
+              {amountFormatter(props.insuranceDays)} days
+            </span>
           </S.DaysQuantity>
           <S.DailyAllowance>
             <span className="compensates-number">
-              {insuranceCompensation.toFixed(2)}€
+              {amountFormatter(insuranceCompensation)}€
             </span>
             <br />
             <span className="daily-allowance">
-              Daily allowance {props.dailyAllowance.toFixed(2)}€
+              Daily allowance {amountFormatter(props.dailyAllowance)}€
             </span>
           </S.DailyAllowance>
         </S.InsuranceCompensation>
@@ -58,7 +61,7 @@ const CalculationResult: React.FC<Props> = (props) => {
         <S.CompensationDaysResult>
           Compensation total for {props.totalDays} days (net)
         </S.CompensationDaysResult>
-        <S.SubTotal>{props.totalCompensation.toFixed(2)} €</S.SubTotal>
+        <S.SubTotal>{amountFormatter(props.totalCompensation)} €</S.SubTotal>
       </S.TotalCompensation>
     </S.ResultContainer>
   );

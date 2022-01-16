@@ -13,7 +13,6 @@ export const SInput = styled(Input)`
     position: relative;
     height: 50px;
     padding-left: 10px !important;
-    padding-right: 60px !important;
   }
 
   &.ant-input-affix-wrapper {
