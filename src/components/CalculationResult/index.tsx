@@ -30,7 +30,7 @@ const CalculationResult: React.FC<Props> = (props) => {
           </S.DaysQuantity>
           <S.DailyAllowance>
             <span className="compensates-number">
-              {amountFormatter(employerCompensation)}€
+              {amountFormatter(employerCompensation)} €
             </span>
             <br />
             <span className="daily-allowance">
@@ -47,11 +47,11 @@ const CalculationResult: React.FC<Props> = (props) => {
           </S.DaysQuantity>
           <S.DailyAllowance>
             <span className="compensates-number">
-              {amountFormatter(insuranceCompensation)}€
+              {amountFormatter(insuranceCompensation)} €
             </span>
             <br />
             <span className="daily-allowance">
-              Daily allowance {amountFormatter(props.dailyAllowance)}€
+              Daily allowance {amountFormatter(props.dailyAllowance)} €
             </span>
           </S.DailyAllowance>
         </S.InsuranceCompensation>
