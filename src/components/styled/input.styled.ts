@@ -3,22 +3,38 @@ import { Input } from "antd";
 import styled from "styled-components";
 
 export const SInput = styled(Input)`
-  border-image-source: ${(props) =>
-    ThemeProps[props.theme.mode]["s_input_border_image_source"]};
-  border-image-slice: 1;
-  border-style: solid;
-  outline: none;
-  box-shadow: ${(props) => ThemeProps[props.theme.mode]["s_input_box_shadow"]};
   border-radius: ${(props) =>
     ThemeProps[props.theme.mode]["s_input_border_radius"]};
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  background: ${(props) =>
+    ThemeProps[props.theme.mode]["s_input_border_image_source"]};
+  background-clip: padding-box;
 
   input {
+    position: relative;
+    height: 50px;
+    padding-left: 10px !important;
+    padding-right: 60px !important;
+  }
+
+  &.ant-input-affix-wrapper {
+    padding: 2px;
     border: none;
-    background: transparent;
-    outline: none;
+
+    &:hover,
+    &:focus,
+    &:after {
+      border: none;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  .ant-input-suffix {
+    position: absolute;
+    right: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 
   input[type="number"]::-webkit-inner-spin-button,
