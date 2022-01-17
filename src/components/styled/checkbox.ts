@@ -16,11 +16,11 @@ export const SCheckbox = styled(Checkbox)`
       ThemeProps[props.theme.mode]["s_checkbox_box_shadow"]};
   }
 
-  /* .ant-checkbox-input {
-    &:focus {
-      outline: none !important;
-    }
-  } */
+  .ant-checkbox-input:focus + .ant-checkbox-inner,
+  .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+  .ant-checkbox:hover .ant-checkbox-inner {
+    border-color: transparent;
+  }
 
   .ant-checkbox-checked:after {
     position: absolute;
