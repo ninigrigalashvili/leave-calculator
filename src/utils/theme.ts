@@ -1,12 +1,3 @@
-export const breakPoints = {
-  xxl: 1920,
-  xl: 1440,
-  lg: 1366,
-  md: 1024,
-  sm: 768,
-  xs: 320,
-};
-
 export const ThemeProps = {
   default: {
     s_form_input_error_color: "#e1261c",
@@ -17,6 +8,7 @@ export const ThemeProps = {
     s_button_background_color:
       "linear-gradient(90deg, #911812 0%, #E1261C 100%)",
     s_button_color: "#ffff",
+    s_button_text_shadow: "2px 2px 0px rgba(0, 0, 0, 0.4)",
     s_card_padding: "80px 20px",
     s_card_background_color: "#ffff",
     s_checkbox_border_color:

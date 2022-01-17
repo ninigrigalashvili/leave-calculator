@@ -26,33 +26,33 @@ const CalculationResult: React.FC<Props> = (props) => {
         <S.EmployerCompensation>
           <S.DaysQuantity>
             The employer compensates <br />
-            <span className="days">{props.employerDays} days</span>
+            <S.Days>{props.employerDays} days</S.Days>
           </S.DaysQuantity>
           <S.DailyAllowance>
-            <span className="compensates-number">
+            <S.CompensatesNumber>
               {amountFormatter(employerCompensation)} €
-            </span>
+            </S.CompensatesNumber>
             <br />
-            <span className="daily-allowance">
-              Daily allowance {amountFormatter(props.dailyAllowance)} €
-            </span>
+            <S.DailyAllowanceDetails>Daily allowance</S.DailyAllowanceDetails>
+            <S.DailyAllowanceDetails>
+              {amountFormatter(props.dailyAllowance)} €
+            </S.DailyAllowanceDetails>
           </S.DailyAllowance>
         </S.EmployerCompensation>
         <S.InsuranceCompensation>
           <S.DaysQuantity>
             Health Insurance compensates <br />
-            <span className="days">
-              {amountFormatter(props.insuranceDays)} days
-            </span>
+            <S.Days>{amountFormatter(props.insuranceDays)} days</S.Days>
           </S.DaysQuantity>
           <S.DailyAllowance>
-            <span className="compensates-number">
+            <S.CompensatesNumber>
               {amountFormatter(insuranceCompensation)} €
-            </span>
+            </S.CompensatesNumber>
             <br />
-            <span className="daily-allowance">
-              Daily allowance {amountFormatter(props.dailyAllowance)} €
-            </span>
+            <S.DailyAllowanceDetails>Daily allowance</S.DailyAllowanceDetails>
+            <S.DailyAllowanceDetails>
+              {amountFormatter(props.dailyAllowance)} €
+            </S.DailyAllowanceDetails>
           </S.DailyAllowance>
         </S.InsuranceCompensation>
       </S.Calculations>

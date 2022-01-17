@@ -39,28 +39,28 @@ export const DaysQuantity = styled.div`
   font-weight: 400;
   line-height: 15px;
   text-align: center;
-  .days {
-    font-weight: 700;
-  }
+`;
+
+export const Days = styled.span`
+  font-weight: 700;
 `;
 
 export const DailyAllowance = styled.div`
   margin-top: 10px;
   text-align: center;
-  width: 85px;
-  .compensates-number {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 20px;
-  }
-  .daily-allowance {
-    font-size: 12px;
-    line-height: 15px;
-    font-weight: 400;
-    color: #7a818e;
-  }
-  .daily-number {
-  }
+`;
+
+export const CompensatesNumber = styled.span`
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+`;
+
+export const DailyAllowanceDetails = styled.div`
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 400;
+  color: #7a818e;
 `;
 
 export const TotalCompensation = styled.div`

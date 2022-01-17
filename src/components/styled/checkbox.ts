@@ -22,6 +22,11 @@ export const SCheckbox = styled(Checkbox)`
     border-color: transparent;
   }
 
+  .ant-checkbox-inner {
+    width: 20px;
+    height: 20px;
+  }
+
   .ant-checkbox-checked:after {
     position: absolute;
     top: 0;
@@ -34,6 +39,19 @@ export const SCheckbox = styled(Checkbox)`
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     visibility: hidden;
+  }
+
+  .ant-checkbox-inner:after {
+    top: 44%;
+    left: 19%;
+    width: 7px;
+    height: 12px;
+  }
+
+  .ant-checkbox-checked .ant-checkbox-inner:after {
+    border: 3px solid #fff;
+    border-top: 0;
+    border-left: 0;
   }
 
   .ant-checkbox-checked .ant-checkbox-inner:after {

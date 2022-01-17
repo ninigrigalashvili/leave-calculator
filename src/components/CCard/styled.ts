@@ -73,7 +73,7 @@ export const SCard = styled.div`
     }
     .ant-checkbox {
       display: flex;
-      margin-top: -4px;
+      margin-top: -5px;
     }
     .ant-form-item-control-input {
       min-height: 0;

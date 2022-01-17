@@ -14,6 +14,8 @@ export const SButton = styled(Button)`
   margin-top: 20px;
   padding: 20px 40px;
   width: 169px;
+  text-shadow: ${(props) =>
+    ThemeProps[props.theme.mode]["s_button_text_shadow"]};
 
   &:focus,
   &:hover {
