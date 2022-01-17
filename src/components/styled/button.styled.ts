@@ -16,12 +16,13 @@ export const SButton = styled(Button)`
   width: 169px;
   text-shadow: ${(props) =>
     ThemeProps[props.theme.mode]["s_button_text_shadow"]};
+  border: 1px solid transparent;
 
   &:focus,
   &:hover {
     background: ${(props) =>
       ThemeProps[props.theme.mode]["s_button_background_color"]};
     color: ${(props) => ThemeProps[props.theme.mode]["s_button_color"]};
-    border: none;
+    border: 1px solid transparent;
   }
 `;

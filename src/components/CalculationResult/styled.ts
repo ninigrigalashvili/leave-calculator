@@ -66,7 +66,7 @@ export const TotalCompensation = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
+  padding-top: 19px;
 `;
 
 export const CompensationDaysResult = styled.div`
