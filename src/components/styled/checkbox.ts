@@ -3,12 +3,9 @@ import { Checkbox } from "antd";
 import { ThemeProps } from "utils/theme";
 
 export const SCheckbox = styled(Checkbox)`
+  &:hover .ant-checkbox-inner,
   .ant-checkbox-inner,
-  .ant-checkbox-inner:hover,
-  .ant-checkbox-inner:focus,
-  .ant-checkbox-input:focus + .ant-checkbox-inner,
-  .ant-checkbox-wrapper:hover .ant-checkbox-inner,
-  .ant-checkbox:hover .ant-checkbox-inner {
+  &:focus .ant-checkbox-inner {
     border: double 2px transparent;
     border-radius: 2px;
     background-image: linear-gradient(white, white),
@@ -18,6 +15,12 @@ export const SCheckbox = styled(Checkbox)`
     box-shadow: ${(props) =>
       ThemeProps[props.theme.mode]["s_checkbox_box_shadow"]};
   }
+
+  /* .ant-checkbox-input {
+    &:focus {
+      outline: none !important;
+    }
+  } */
 
   .ant-checkbox-checked:after {
     position: absolute;
@@ -33,8 +36,7 @@ export const SCheckbox = styled(Checkbox)`
     visibility: hidden;
   }
 
-  .ant-checkbox-checked .ant-checkbox-inner:after,
-  .ant-checkbox-checked:hover {
+  .ant-checkbox-checked .ant-checkbox-inner:after {
     border-color: ${(props) =>
       ThemeProps[props.theme.mode]["s_checkbox_tick_color"]} !important;
   }
