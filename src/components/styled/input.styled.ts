@@ -8,7 +8,7 @@ export const SInput = styled(Input)`
   background: ${(props) =>
     ThemeProps[props.theme.mode]["s_input_border_image_source"]};
   background-clip: padding-box;
-
+  box-shadow: ${(props) => ThemeProps[props.theme.mode]["s_input_box_shadow"]};
   input {
     position: relative;
     height: 50px;
@@ -23,7 +23,6 @@ export const SInput = styled(Input)`
     &:focus,
     &:after {
       border: none;
-      box-shadow: none;
       outline: none;
     }
   }

@@ -15,6 +15,8 @@ export const SCheckbox = styled(Checkbox)`
       ${(props) => ThemeProps[props.theme.mode]["s_checkbox_border_color"]};
     background-origin: border-box;
     background-clip: content-box, border-box;
+    box-shadow: ${(props) =>
+      ThemeProps[props.theme.mode]["s_checkbox_box_shadow"]};
   }
 
   .ant-checkbox-checked:after {
