@@ -9,4 +9,8 @@ export const SForm = styled(Form)`
     font-size: 12px;
     margin-top: 5px;
   }
+  .ant-form-item-explain {
+    position: absolute;
+    top: 50px;
+  }
 `;
