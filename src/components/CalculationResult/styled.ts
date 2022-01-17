@@ -8,7 +8,8 @@ export const Calculations = styled.div`
   margin-top: 20px;
   left: 0;
   right: 0;
-  padding: 19px 20px 20px 20px;
+  gap: 20px;
+  padding: 19px 0px 20px 0px;
 `;
 
 export const Border = styled.div`
@@ -21,14 +22,12 @@ export const Border = styled.div`
 `;
 
 export const EmployerCompensation = styled.div`
-  width: 130px;
   align-items: center;
   display: flex;
   flex-direction: column;
 `;
 
 export const InsuranceCompensation = styled.div`
-  width: 130px;
   align-items: center;
   display: flex;
   flex-direction: column;

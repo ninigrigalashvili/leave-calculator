@@ -29,6 +29,10 @@ export const StyledSecondaryContainer = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 40px;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: minmax(100px, auto);
+  }
 `;
 
 export const StyledSecondaryTitle = styled.h2`
